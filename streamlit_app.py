@@ -1,23 +1,27 @@
 import streamlit as st
 from PIL import Image
 
+# Load custom styles
 with open("style.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
 #####################
 # Header 
 st.write('''
-# Lasitha Dilshan Thilakarathna
-##### *Resume* 
+# Lasitha Dilshan Thilakarathna, B.Eng.
+##### *Resume*
 ''')
 
 image = Image.open('dp.png')
 st.image(image, width=150)
 
-st.markdown('## Summary', unsafe_allow_html=True)
+#####################
+# Summary
+st.markdown('## Summary')
 st.info('''
-- Software Engineer with 4 years of experience in IT Industry.
-- Strong expertise in Generative AI, Backend, Frontend, and Data Engineering tasks.
+- Software Engineer with over 4 years of experience in IT industry.
+- Expertise in Generative AI, Backend, Frontend, and Data Engineering tasks.
+- Strong skills in web technologies, mobile development, and AI application development.
 - Passionate about leveraging knowledge for organizational benefits and career growth.
 ''')
 
@@ -25,12 +29,11 @@ st.info('''
 # Objective
 st.markdown('## Objective')
 st.write('''
-I am looking for opportunities in career growth and stability and look forward to working with confidence in a dynamic and challenging environment, utilizing my knowledge for the benefit of the organization and enhancing my skills.
+Looking for opportunities in career growth and stability. Confident in working within dynamic and challenging environments, utilizing my skills for the benefit of the organization while enhancing my professional capabilities.
 ''')
 
 #####################
 # Navigation
-
 st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
 
 st.markdown("""
@@ -42,10 +45,10 @@ st.markdown("""
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#education">Education</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#education">Education</a>
+        <a class="nav-link" href="#work-experience">Work Experience</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#projects">Projects</a>
@@ -54,7 +57,10 @@ st.markdown("""
         <a class="nav-link" href="#skills">Skills</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#achievements">Achievements</a>
+        <a class="nav-link" href="#certifications">Certifications</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#social-media">Social Media</a>
       </li>
     </ul>
   </div>
@@ -62,74 +68,62 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 #####################
-# Experience
-st.markdown('## Experience')
-txt('**Associate Software Engineer**, Virtusa, Colombo', '2022 - Present')
+# Education
+st.markdown('## Education')
 st.write('''
-- Performed Frontend, Backend, and Data Engineering tasks, including work on Generative AI projects.
-''')
-
-txt('**Intern Engineer**, Surreytech Consulting Sri Lanka', '2021 - 2022')
-st.write('''
-- Full Stack Engineer for a one-year internship.
+**M.Sc. in Information Technology**, SLIIT Malabe (Reading)  
+**B.Eng. in Software Engineering**, IIC University of Technology, Cambodia (GPA: 3.56/4)
 ''')
 
 #####################
-# Education
-st.markdown('## Education')
-txt('**MSc in Information Technology** (Reading), SLIIT, Sri Lanka', '2023 - Present')
-txt('**B.Eng in Software Engineering**, IIC University of Technology, Cambodia', '2018 - 2021')
+# Work Experience
+st.markdown('## Work Experience')
 st.write('''
-- Degree with Second Upper (GPA: `3.56`).
-''')
+**Associate Software Engineer**, Virtusa, Colombo (2022 - Present)  
+- Developed multiple applications, including Generative AI solutions, internal portals, and frontend applications.  
+- Technologies used: Python, Java, Angular, React, OpenAI, LangChain, FastAPI.
 
-txt('**Professional Higher National Diploma in Software Engineering**, Scottish Qualifications Authority, Scotland', '2019 - 2020')
+**Intern Engineer**, Surrey Tech Consulting Sri Lanka (2021 - 2022)  
+- Contributed to Lak Health and Email API projects for the Sri Lankan government.  
+- Technologies used: Angular, Spring Boot, HTML, CSS.
+''')
 
 #####################
 # Projects
 st.markdown('## Projects')
-txt4('**AI-Powered CV Extractor**', 'Virtusa', 'Python, Generative AI, OpenAI, LangChain, LLM')
 st.write('''
-- An AI application that extracts information from various CV formats and exports results in Word/PDF.
-''')
-
-txt4('**BRD to User Story Generation**', 'Virtusa - Generative AI Hackathon', 'Python, Generative AI, OpenAI, LangChain')
-st.write('''
-- Transformed Business Requirement Documents into user stories using Generative AI.
-''')
-
-txt4('**SDLC Automation**', 'MSc Final Year Project', 'Python, Generative AI, OpenAI, LangChain')
-st.write('''
-- Automated Software Development Life Cycle processes using Generative AI.
-''')
-
-txt4('**After-Hour Transport & Food Management System**', 'Virtusa', 'Microsoft Power Apps, SharePoint, React')
-st.write('''
-- Managed food and transport facilities for employees working after hours.
+- **AI-Powered CV Extractor**: An AI-based application to extract and structure resume data (Python, LangChain).  
+- **BRD to User Story Generation**: Generative AI tool for software documentation automation.  
+- **SDLC Automation**: Automated software development lifecycle processes using Generative AI.  
+- **After-Hour Transport & Food Management System**: Employee management app using Microsoft Power Apps.
 ''')
 
 #####################
 # Skills
 st.markdown('## Skills')
-txt3('Programming', '`Java`, `Python`, `JavaScript`, `CSS`, `HTML`, `SCSS`')
-txt3('Generative AI', '`OpenAI`, `LangChain`, `LLM`, `Hugging Face`, `FastAPI`')
-txt3('Web Development', '`Java Spring Boot`, `Angular`, `React`')
-txt3('Database', '`MySQL`, `PostgreSQL`, `Firebase`')
-txt3('API Management', '`Spring Boot`, `FastAPI`')
-txt3('Mobile Development', '`Native Android`, `Google Play Store`')
+st.write('''
+- **Programming Languages**: Java, Python, JavaScript, TypeScript, SQL, HTML5, CSS5.  
+- **Technologies**: Generative AI, Spring Boot, FastAPI, Node.js.  
+- **Databases**: MySQL, PostgreSQL, Firebase, SQLite.  
+- **Web Development**: Angular, React, REST APIs, JSON.  
+- **Version Control**: Git, GitHub, GitLab.
+''')
 
 #####################
-# Achievements
-st.markdown('## Achievements')
+# Certifications
+st.markdown('## Certifications')
 st.write('''
-- Arctic Code Vault Contributor (2020 GitHub Archive Program).
+- Career Essentials in Generative AI (Microsoft and LinkedIn, 2023).  
+- Gen AI Hackathon Certificate of Participation (Virtusa, 2024).  
 - Virtusa Certified GenAI Assisted Engineer (2024).
-- Gen AI Hackathon Certificate of Participation, Virtusa (2024).
 ''')
 
 #####################
 # Social Media
 st.markdown('## Social Media')
-txt2('Portfolio', 'https://lasithadilshan.github.io/')
-txt2('LinkedIn', 'https://www.linkedin.com/in/lasitha-thilakarathna-3027ab120/')
-txt2('GitHub', 'https://github.com/lasithadilshan')
+st.write('''
+- [Portfolio](https://lasithadilshan.github.io/)  
+- [GitHub](https://github.com/lasithadilshan)  
+- [LinkedIn](https://linkedin.com/in/lasitha-thilakarathna-3027ab120)  
+- [Google Play Store](https://play.google.com/store/apps/dev?id=8598412061020641933)
+''')
